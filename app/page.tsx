@@ -1,234 +1,267 @@
-import { TracingBeam } from "@/components/ui/tracing-beam";
-import { Button } from "@heroui/react";
-import Image from "next/image";
+import { Card, Link, Separator } from "@heroui/react";
 
 export default function Home() {
+  const coreFeatures = [
+    {
+      title: "Overall Impression Score",
+      description:
+        "Get a fast, high-level signal before investing time in deeper research.",
+    },
+    {
+      title: "Deep Analysis",
+      description:
+        "Review core strengths, limitations, and trade-offs early to reduce post-purchase surprises.",
+    },
+    {
+      title: "Personalized Guidance",
+      description:
+        "Ask in plain language and receive guidance aligned with your budget, priorities, and actual use case.",
+    },
+    {
+      title: "Unbiased Comparisons",
+      description:
+        "Compare shortlisted options side by side with clear criteria and practical context.",
+    },
+    {
+      title: "Transparent Deal Discovery",
+      description:
+        "Review purchase options with transparent context so you can proceed with greater confidence.",
+    },
+  ];
+
+  const principles = [
+    "User First: every part of Impact is built to help people choose better, faster.",
+    "No Brand Bias: recommendations are driven by product evidence, not brand preference.",
+    "Clear and Honest: we are transparent about how Impact works and how trust is protected.",
+  ];
+
   return (
-    <TracingBeam>
-      <div className="flex min-h-screen flex-col items-center p-6 max-w-5xl m-auto text-center">
-        {/* Header Section */}
-        <header className="mb-12">
-          <img
-            src="https://cdn.eurekacore.com/logo.png"
-            alt="EurekaCore Logo"
-            className="rounded-3xl h-50 mx-auto"
-          />
-          <h1 className="text-4xl font-extrabold mt-6">
-            Project: Impact - A EurekaCore Initiative
-          </h1>
-        </header>
-
-        {/* Abstract Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">1. Abstract</h2>
-          <p className="text-lg leading-relaxed">
-            This document outlines the vision, architecture, and principles of{" "}
-            <strong>Impact</strong>, a state-of-the-art product intelligence
-            platform developed by <strong>EurekaCore</strong>. Impact is
-            designed to revolutionize how consumers make purchasing decisions by
-            providing comprehensive, unbiased, and deeply personalized analysis
-            for any product, powered by a next-generation AI engine.
-          </p>
+    <main className="relative overflow-hidden px-4 py-8 sm:px-6 sm:py-12">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6">
+        <section className="hero-surface rounded-3xl border border-white/10 p-6 sm:p-10">
+          <div className="text-center">
+            <img
+              src="https://cdn.eurekacore.com/logo.png"
+              alt="EurekaCore Logo"
+              className="mx-auto mb-6 h-36 rounded-3xl object-contain sm:h-44"
+            />
+            <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+              Impact by EurekaCore
+            </h1>
+            <p className="mx-auto mt-4 max-w-3xl text-base text-slate-200 sm:text-lg">
+              Impact is an AI-powered product decision platform designed to make
+              pre-purchase research clearer, faster, and more reliable. It acts
+              as the decision layer between research and purchase, helping users
+              reduce uncertainty, avoid avoidable mistakes, and choose products
+              that fit their budget and actual use case.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-300 sm:text-base">
+              We are actively developing Impact and preparing for launch.
+            </p>
+          </div>
         </section>
 
-        {/* About EurekaCore Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">2. About EurekaCore</h2>
-          <p className="text-lg leading-relaxed">
-            <strong>EurekaCore</strong> is a technology company founded on the
-            principle of solving real-world information problems through the
-            ethical and innovative application of artificial intelligence. Our
-            mission is to create tools that empower users, cut through digital
-            noise, and deliver clarity and confidence. Based in Dubrajpur West
-            Bengal, India, EurekaCore is committed to building scalable,
-            user-centric solutions that have a meaningful and positive impact on
-            people's lives. Impact is our flagship consumer platform and the
-            primary focus of our development efforts.
+        <Card className="section-card">
+          <Card.Content className="space-y-4 p-6 sm:p-8">
+            <h2 className="section-title">1. Abstract</h2>
+            <p className="section-copy">
+              This page outlines the vision, architecture principles, and
+              product commitments behind <strong>Impact</strong>, EurekaCore’s
+              flagship consumer initiative. Impact is designed to deliver
+              comprehensive, impartial, and personalized product intelligence so
+              users can make confident purchase decisions.
+            </p>
+          </Card.Content>
+        </Card>
+
+        <Card className="section-card">
+          <Card.Content className="space-y-4 p-6 sm:p-8">
+            <h2 className="section-title">2. About EurekaCore</h2>
+            <p className="section-copy">
+              <strong>EurekaCore</strong> is a technology company focused on
+              solving real-world information problems through responsible AI and
+              practical product design. Based in Dubrajpur, West Bengal, India,
+              we build user-centric systems that reduce noise, increase clarity,
+              and create practical value.
+            </p>
+          </Card.Content>
+        </Card>
+
+        <Card className="section-card">
+          <Card.Content className="space-y-6 p-6 sm:p-8">
+            <h2 className="section-title">3. About Impact</h2>
+            <div>
+              <h3 className="subsection-title">3.1. What Is Impact?</h3>
+              <p className="section-copy">
+                <strong>Impact</strong> is an AI-powered product decision
+                platform for pre-purchase research. It brings together expert
+                reviews, community discussions, and practical product feedback
+                into one clear, structured view. Impact is not an e-commerce
+                store; it is the decision layer between research and purchase.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="subsection-title">3.2. The Problem We Solve</h3>
+              <p className="section-copy">
+                Product research is often fragmented and hard to trust. Users
+                open too many tabs, encounter sponsored recommendations, read
+                inconsistent or low-quality reviews, and still second-guess the
+                final choice. The result is wasted time, decision fatigue, and
+                avoidable purchase regret.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="subsection-title">3.3. The Solution</h3>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {coreFeatures.map((feature) => (
+                  <div
+                    key={feature.title}
+                    className="rounded-2xl border border-white/10 bg-slate-900/50 p-4"
+                  >
+                    <p className="text-base font-semibold text-white">
+                      {feature.title}
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="subsection-title">3.4. Core Principles</h3>
+              <ul className="list-disc space-y-2 pl-5 text-sm leading-7 text-slate-200 sm:text-base">
+                {principles.map((principle) => (
+                  <li key={principle}>{principle}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="subsection-title">
+                3.5. Shopping-Research Features vs Impact
+              </h3>
+              <p className="section-copy">
+                Shopping-research features in AI chatbots are useful for quick
+                exploration, but final purchase decisions require clearer
+                trade-offs, fewer surprises, and stronger confidence. That is
+                where Impact is stronger.
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-200 sm:text-base">
+                <li>
+                  <strong>Less second-guessing:</strong> Impact applies a
+                  consistent decision framework so comparisons remain fair and
+                  easier to trust.
+                </li>
+                <li>
+                  <strong>Fewer post-purchase surprises:</strong> key product
+                  claims are verified across independent sources before they are
+                  treated as reliable.
+                </li>
+                <li>
+                  <strong>Clearer conflict handling:</strong> when reviews or
+                  reports disagree, Impact surfaces the conflict instead of
+                  hiding it.
+                </li>
+                <li>
+                  <strong>Confidence under uncertainty:</strong> missing or weak
+                  information is clearly marked as unknown instead of guessed.
+                </li>
+                <li>
+                  <strong>Decision-ready output:</strong> results are organized
+                  for shortlist, compare, and buy workflows rather than one-off
+                  chat responses.
+                </li>
+              </ul>
+              <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
+                Use chatbot shopping features to explore quickly. Use Impact
+                when you are ready to make a confident final decision.
+              </p>
+            </div>
+          </Card.Content>
+        </Card>
+
+        <Card className="section-card">
+          <Card.Content className="space-y-6 p-6 sm:p-8">
+            <h2 className="section-title">4. Technology</h2>
+            <div>
+              <h3 className="subsection-title">4.1. AI Architecture</h3>
+              <p className="section-copy">
+                Impact uses a dual-layer approach: a research and synthesis layer
+                that gathers and evaluates product evidence, and a conversational
+                reasoning layer that translates that evidence into clear,
+                personalized guidance. This design keeps the platform
+                model-agnostic and supports continuous quality improvement over
+                time.
+              </p>
+            </div>
+            <Separator className="bg-white/15" />
+            <div>
+              <h3 className="subsection-title">4.2. Engineering Approach</h3>
+              <p className="section-copy">
+                Our systems are designed for accuracy, speed, and reliability at
+                scale. We prioritize measurable quality, transparent evaluation,
+                and fast iteration so users receive reliable guidance as
+                products and markets evolve.
+              </p>
+            </div>
+          </Card.Content>
+        </Card>
+
+        <Card className="section-card">
+          <Card.Content className="space-y-4 p-6 sm:p-8">
+            <h2 className="section-title">5. Business Model</h2>
+            <p className="section-copy">
+              Impact follows a trust-first affiliate model with explicit user
+              safeguards.
+            </p>
+            <ul className="list-disc space-y-2 pl-5 text-sm leading-7 text-slate-200 sm:text-base">
+              <li>
+                <strong>Phase 1 (Launch):</strong> no affiliate links while we
+                focus on product quality and user trust.
+              </li>
+              <li>
+                <strong>Phase 2 (Monetization):</strong> curated affiliate
+                partnerships introduced after trust and utility are established.
+              </li>
+              <li>
+                <strong>Transparency Rule:</strong> users should always see the
+                best available option within our trusted retailer sandbox.
+              </li>
+            </ul>
+          </Card.Content>
+        </Card>
+
+        <Card className="section-card">
+          <Card.Content className="space-y-4 p-6 sm:p-8">
+            <h2 className="section-title">6. Team</h2>
+            <p className="section-copy">
+              EurekaCore is founded by Arijit Dey and Dipak Dey. We are a small
+              team focused on building Impact into a dependable global product
+              research platform.
+            </p>
+          </Card.Content>
+        </Card>
+
+        <footer className="rounded-2xl border border-white/10 bg-slate-950/50 px-6 py-8 text-center">
+          <p className="text-sm text-slate-300">
+            For inquiries, partnerships, or early access, contact{" "}
+            <Link
+              href="mailto:info@eurekacore.com"
+              className="font-semibold text-sky-300 hover:text-sky-200"
+            >
+              info@eurekacore.com
+            </Link>
+            .
           </p>
-        </section>
-
-        {/* About Impact Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">3. About Impact</h2>
-
-          <h3 className="text-2xl font-semibold mb-3">3.1. What is Impact?</h3>
-          <p className="text-lg leading-relaxed mb-6">
-            <strong>Impact</strong> is an AI-native platform designed to be the
-            definitive destination for product research. It functions as a
-            comprehensive analysis engine that scours the entire internet
-            including reviews, articles, social media discussions, and video
-            tutorials to generate a single, easy-to-understand overview of any
-            product. It is not an e-commerce store; it is a pre-purchase guide
-            that helps users make the most informed decision possible, acting as
-            a powerful, complementary catalyst for the e-commerce ecosystem.
+          <p className="mt-3 text-xs text-slate-400">
+            &copy; 2026 EurekaCore. All rights reserved.
           </p>
-
-          <h3 className="text-2xl font-semibold mb-3">
-            3.2. The Problem We Solve
-          </h3>
-          <p className="text-lg leading-relaxed mb-6">
-            The modern consumer is overwhelmed. Product research involves
-            navigating dozens of tabs, biased sponsored content, fake reviews,
-            and conflicting information. This process is time-consuming,
-            confusing, and often leads to purchase anxiety or regret. There is a
-            deep and growing need for a single source of truth that is
-            trustworthy, comprehensive, and tailored to the individual.
-          </p>
-
-          <h3 className="text-2xl font-semibold mb-3">
-            3.3. The Solution: Core Features
-          </h3>
-          <ul className="list-disc list-inside text-lg leading-relaxed mb-6">
-            <li>
-              <strong>The Overall Impression Score:</strong> A dynamic score out
-              of 5 stars, calculated by the AI based on a real-time, multimodal
-              analysis of global sentiment and data.
-            </li>
-            <li>
-              <strong>Deep Analysis:</strong> A clear, concise summary of a
-              product's pros, cons, key features, and real-world performance,
-              synthesized from millions of data points.
-            </li>
-            <li>
-              <strong>Personalized AI Chatbot:</strong> Users can converse with
-              our advanced AI to ask specific questions like,{" "}
-              <em>
-                "Is this laptop good for my graphic design course in college,
-                given my budget of ₹80,000?"
-              </em>
-            </li>
-            <li>
-              <strong>Unbiased Comparisons:</strong> Intelligent side-by-side
-              comparisons and alternative product suggestions based on user
-              experience and value, not just on-paper specifications.
-            </li>
-            <li>
-              <strong>Transparent Deal-Finding:</strong> Impact finds the best
-              purchase options for a product and presents them with absolute
-              transparency, building a foundation of user trust.
-            </li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold mb-3">3.4. Core Principles</h3>
-          <ul className="list-disc list-inside text-lg leading-relaxed">
-            <li>
-              <strong>Absolute User-Centricity:</strong> Every feature is
-              designed with the primary goal of empowering the user and
-              simplifying their decision-making process.
-            </li>
-            <li>
-              <strong>Unwavering Impartiality:</strong> Our analysis and
-              recommendations are driven solely by data. We are unbiased towards
-              any brand or retail platform.
-            </li>
-            <li>
-              <strong>Radical Transparency:</strong> We are open about how our
-              platform works and how we sustain it. Our business model will
-              never compromise our commitment to providing the best, most honest
-              advice.
-            </li>
-          </ul>
-        </section>
-
-        {/* Technology Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">4. Technology</h2>
-
-          <h3 className="text-2xl font-semibold mb-3">
-            4.1. The AI Engine: A Dual-Model Architecture
-          </h3>
-          <p className="text-lg leading-relaxed mb-6">
-            Our engine is composed of two specialized AI systems working in
-            tandem:
-          </p>
-          <ul className="list-disc list-inside text-lg leading-relaxed mb-6">
-            <li>
-              <strong>The Research & Analysis Core (Backend):</strong> For deep
-              product research and data synthesis, we will utilize tools like{" "}
-              <strong>Gemini Deep Research</strong>.
-            </li>
-            <li>
-              <strong>The Conversational & Reasoning Layer (Frontend):</strong>{" "}
-              For all user-facing interactions, we leverage a state-of-the-art
-              Large Language Model like <strong>Gemini 3 Pro</strong>.
-            </li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold mb-3">4.2. The Tech Stack</h3>
-          <ul className="list-disc list-inside text-lg leading-relaxed">
-            <li>
-              <strong>Backend:</strong> <strong>Go (Golang)</strong> for its
-              exceptional speed, concurrency, and efficiency in handling
-              data-intensive operations.
-            </li>
-            <li>
-              <strong>Web Framework:</strong> <strong>Gin</strong> for its
-              lightweight and high-performance routing capabilities.
-            </li>
-            <li>
-              <strong>Database:</strong> <strong>MongoDB</strong> for its
-              flexibility and scalability in managing diverse and unstructured
-              product data.
-            </li>
-            <li>
-              <strong>Frontend:</strong> <strong>Next.js</strong> (React
-              Framework) to create a server-rendered, incredibly fast, and fluid
-              user experience.
-            </li>
-          </ul>
-        </section>
-
-        {/* Business Model Section */}
-        <section>
-          <h2 className="text-3xl font-bold mb-4">5. Business Model</h2>
-          <p className="text-lg leading-relaxed mb-6">
-            Impact's revenue will be generated through{" "}
-            <strong>affiliate marketing</strong>. However, this is governed by
-            our "Trust-First" strategy:
-          </p>
-          <ul className="list-disc list-inside text-lg leading-relaxed">
-            <li>
-              <strong>Phase 1 (Launch):</strong> We will intentionally launch
-              with <strong>no affiliate links</strong>.
-            </li>
-            <li>
-              <strong>Phase 2 (Monetization):</strong> Once we have established
-              significant traffic and trust, we will integrate affiliate links
-              from our vetted partners.
-            </li>
-            <li>
-              <strong>The Transparency Rule:</strong> Our AI will always show
-              the user the <strong>absolute best deal</strong> it can find
-              within our curated "safe sandbox" of trusted retailers.
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-bold mb-3 mt-4">About Our Team</h2>
-          <p>
-            Our small team at EurekaCore consists of just two highly passionate founders—Arijit Dey and Dipak Dey. We are deeply committed to building Impact into the world's best product research platform, and we're excited to share this journey with you.
-          </p>
-        </section>
-
-        <section>
-          <p className="mt-6 text-2xl font-semibold">
-            We are actively working on developing Impact. We expect to launch it
-            very soon.
-          </p>
-        </section>
-
-<div className="mt-16 mb-4">
-        <section className="text-sm text-gray-400 max-w-md mb-2">
-          If you have any inquiries or want to get a sneak peek into EurekaCore
-          and Impact, feel free to reach us out at{" "}
-          <strong>info@eurekacore.com</strong>
-        </section>
-        <footer className="text-sm text-gray-500">
-          &copy; 2026 EurekaCore. All rights reserved.
         </footer>
-        </div>
       </div>
-    </TracingBeam>
+    </main>
   );
 }

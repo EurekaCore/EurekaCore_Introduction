@@ -1,8 +1,65 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
+:root {
+  --bg-primary: #080d14;
+  --bg-secondary: #0f1826;
+  --surface: #0b1220cc;
+  --text-primary: #f5f7fb;
+  --text-secondary: #d5dceb;
+  --text-muted: #9aa9c2;
+}
+
 body {
-  background: #11161d;
-  color: #ededed;
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  color: var(--text-primary);
+  font-family:
+    var(--font-geist-sans),
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+  background:
+    radial-gradient(circle at 15% -10%, #1b355f 0%, #00000000 35%),
+    radial-gradient(circle at 85% 0%, #0f5d78 0%, #00000000 32%),
+    linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 70%);
+}
+
+.hero-surface {
+  background:
+    linear-gradient(140deg, #16253a99 0%, #0f172abf 45%, #0b1020d9 100%),
+    radial-gradient(circle at 25% 20%, #2a7ba833 0%, #00000000 42%);
+  backdrop-filter: blur(10px);
+}
+
+.section-card {
+  border: 1px solid #ffffff1a;
+  background: var(--surface);
+  backdrop-filter: blur(8px);
+}
+
+.section-title {
+  color: var(--text-primary);
+  font-size: 1.45rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.subsection-title {
+  color: #e5ecfb;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.section-copy {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+@media (max-width: 640px) {
+  .section-copy {
+    line-height: 1.75;
+  }
 }

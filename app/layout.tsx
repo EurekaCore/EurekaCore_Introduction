@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EurekaCore",
-  description: "About EurekaCore",
+  title: "Impact by EurekaCore",
+  description:
+    "Impact by EurekaCore is a trust-first, AI-powered product decision platform for clearer pre-purchase research and confident buying decisions.",
   icons: {
     icon: "https://cdn.eurekacore.com/logoIcon.png",
   },

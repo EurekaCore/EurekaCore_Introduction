@@ -1,38 +1,102 @@
 import { Card, Link, Separator } from "@heroui/react";
+import { LaunchEngagementSection } from "@/components/launch-engagement";
 
 export default function Home() {
   const coreFeatures = [
     {
+      title: "Search for a Product",
+      description:
+        "Search for a specific product or model and start from a structured, decision-ready research view.",
+    },
+    {
       title: "Overall Impression Score",
       description:
-        "Get a fast, high-level signal before investing time in deeper research.",
+        "See a fast, high-level score to understand overall product standing before deeper evaluation.",
     },
     {
-      title: "Deep Analysis",
+      title: "Internet Sentiment Summary",
       description:
-        "Review core strengths, limitations, and trade-offs early to reduce post-purchase surprises.",
+        "See recurring praise and recurring complaints in one place so real-world expectations are clearer before you buy.",
     },
     {
-      title: "Personalized Guidance",
+      title: "Strengths and Weaknesses",
       description:
-        "Ask in plain language and receive guidance aligned with your budget, priorities, and actual use case.",
+        "Review core strengths, limitations, and practical trade-offs so you can choose with fewer surprises.",
     },
     {
-      title: "Unbiased Comparisons",
+      title: "Compare with Alternatives",
       description:
-        "Compare shortlisted options side by side with clear criteria and practical context.",
+        "Compare shortlisted alternatives side by side using consistent criteria and practical context.",
     },
     {
-      title: "Transparent Deal Discovery",
+      title: "Confidence and Uncertainty",
       description:
-        "Review purchase options with transparent context so you can proceed with greater confidence.",
+        "See where confidence is strong and where evidence is weak, so you know what is clear and what still needs caution.",
+    },
+    {
+      title: "Clear Conflict Notes",
+      description:
+        "If reliable sources disagree, you see the disagreement directly so important conflicts are not hidden.",
+    },
+    {
+      title: "Product Media and Tutorials",
+      description:
+        "Impact is designed to bring visuals and practical tutorials into one flow so everyday use is easier to understand before purchase.",
+    },
+    {
+      title: "Region-Specific Buying Links",
+      description:
+        "Impact is designed to show buying links that match your location and currency so final purchase steps feel more practical.",
     },
   ];
 
   const principles = [
-    "User First: every part of Impact is built to help people choose better, faster.",
+    "User First: every part of Impact is built to help you choose better, faster.",
     "No Brand Bias: recommendations are driven by product evidence, not brand preference.",
     "Clear and Honest: we are transparent about how Impact works and how trust is protected.",
+  ];
+
+  const section35Points = [
+    {
+      title: "Built for buying decisions, not general chat",
+      description:
+        "Impact is focused on helping you choose the right product, not just giving fast replies.",
+    },
+    {
+      title: "A clearer picture before you spend",
+      description:
+        "You see practical strengths, real limitations, and where a product fits or does not fit.",
+    },
+    {
+      title: "Honest handling of uncertainty",
+      description:
+        "When evidence is weak or unclear, Impact shows that directly instead of acting certain.",
+    },
+    {
+      title: "Decision-friendly comparisons",
+      description:
+        "You can review relevant alternatives and understand why each one is worth considering.",
+    },
+    {
+      title: "Research that can become more dependable over time",
+      description:
+        "Impact is designed to keep product analysis available and reusable instead of treating every query as one-off chat output.",
+    },
+    {
+      title: "Practical buying context",
+      description:
+        "Impact is designed to support purchase options in ways that can match your location and currency.",
+    },
+    {
+      title: "Designed for higher-stakes purchases",
+      description:
+        "For expensive decisions, Impact aims to reduce avoidable mistakes by making trade-offs clearer.",
+    },
+    {
+      title: "Conflicts are surfaced, not hidden",
+      description:
+        "If trusted sources disagree on key points, Impact is designed to surface that disagreement clearly instead of smoothing it over.",
+    },
   ];
 
   return (
@@ -50,10 +114,10 @@ export default function Home() {
             </h1>
             <p className="mx-auto mt-4 max-w-3xl text-base text-slate-200 sm:text-lg">
               Impact is an AI-powered product decision platform designed to make
-              pre-purchase research clearer, faster, and more reliable. It acts
-              as the decision layer between research and purchase, helping users
-              reduce uncertainty, avoid avoidable mistakes, and choose products
-              that fit their budget and actual use case.
+              pre-purchase research clearer, faster, and more reliable for
+              higher-stakes purchases. It helps you reduce costly mistakes by
+              making trade-offs, uncertainty, and practical buying context
+              easier to understand before you spend.
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-300 sm:text-base">
               We are actively developing Impact and preparing for launch.
@@ -67,9 +131,9 @@ export default function Home() {
             <p className="section-copy">
               This page outlines the vision, architecture principles, and
               product commitments behind <strong>Impact</strong>, EurekaCore’s
-              flagship consumer initiative. Impact is designed to deliver
-              comprehensive, impartial, and personalized product intelligence so
-              users can make confident purchase decisions.
+              flagship product platform. Impact is designed to deliver
+              comprehensive, impartial, and personalized product guidance so you
+              can make confident purchase decisions with less regret.
             </p>
           </Card.Content>
         </Card>
@@ -81,7 +145,7 @@ export default function Home() {
               <strong>EurekaCore</strong> is a technology company focused on
               solving real-world information problems through responsible AI and
               practical product design. Based in Dubrajpur, West Bengal, India,
-              we build user-centric systems that reduce noise, increase clarity,
+              we build people-centric systems that reduce noise, increase clarity,
               and create practical value.
             </p>
           </Card.Content>
@@ -97,14 +161,26 @@ export default function Home() {
                 platform for pre-purchase research. It brings together expert
                 reviews, community discussions, and practical product feedback
                 into one clear, structured view. Impact is not an e-commerce
-                store; it is the decision layer between research and purchase.
+                store; it is built to support your final buying decisions.
+                You can search a product, review overall scoring and internet
+                sentiment, and compare alternatives in one structured workflow.
+              </p>
+              <p className="section-copy">
+                Each product is deeply analyzed before results are presented, so
+                you can evaluate real capabilities, limitations, and
+                trade-offs with clarity. Product analysis pages are designed to
+                stay available, so your research can be reused over time.
+              </p>
+              <p className="section-copy">
+                If an analysis is not ready, Impact is designed to prepare it
+                when you need it.
               </p>
             </div>
 
             <div>
               <h3 className="subsection-title">3.2. The Problem We Solve</h3>
               <p className="section-copy">
-                Product research is often fragmented and hard to trust. Users
+                Product research is often fragmented and hard to trust. You
                 open too many tabs, encounter sponsored recommendations, read
                 inconsistent or low-quality reviews, and still second-guess the
                 final choice. The result is wasted time, decision fatigue, and
@@ -145,40 +221,28 @@ export default function Home() {
                 3.5. Shopping-Research Features vs Impact
               </h3>
               <p className="section-copy">
-                Shopping-research features in AI chatbots are useful for quick
-                exploration, but final purchase decisions require clearer
-                trade-offs, fewer surprises, and stronger confidence. That is
-                where Impact is stronger.
+                Generic AI shopping answers can be useful, but they are often
+                inconsistent. Impact is built to help you make better buying
+                decisions with clearer trade-offs and less guesswork.
               </p>
-              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-200 sm:text-base">
-                <li>
-                  <strong>Less second-guessing:</strong> Impact applies a
-                  consistent decision framework so comparisons remain fair and
-                  easier to trust.
-                </li>
-                <li>
-                  <strong>Fewer post-purchase surprises:</strong> key product
-                  claims are verified across independent sources before they are
-                  treated as reliable.
-                </li>
-                <li>
-                  <strong>Clearer conflict handling:</strong> when reviews or
-                  reports disagree, Impact surfaces the conflict instead of
-                  hiding it.
-                </li>
-                <li>
-                  <strong>Confidence under uncertainty:</strong> missing or weak
-                  information is clearly marked as unknown instead of guessed.
-                </li>
-                <li>
-                  <strong>Decision-ready output:</strong> results are organized
-                  for shortlist, compare, and buy workflows rather than one-off
-                  chat responses.
-                </li>
-              </ul>
+              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                {section35Points.map((point) => (
+                  <div
+                    key={point.title}
+                    className="rounded-2xl border border-sky-300/20 bg-slate-900/45 p-4 ring-1 ring-sky-500/10"
+                  >
+                    <p className="text-base font-semibold text-white">
+                      {point.title}
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">
+                      {point.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
               <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
-                Use chatbot shopping features to explore quickly. Use Impact
-                when you are ready to make a confident final decision.
+                Impact is not trying to be a general chatbot with a shopping mode.
+                It is built as a trusted product decision platform for real buyers.
               </p>
             </div>
           </Card.Content>
@@ -190,22 +254,20 @@ export default function Home() {
             <div>
               <h3 className="subsection-title">4.1. AI Architecture</h3>
               <p className="section-copy">
-                Impact uses a dual-layer approach: a research and synthesis layer
-                that gathers and evaluates product evidence, and a conversational
-                reasoning layer that translates that evidence into clear,
-                personalized guidance. This design keeps the platform
-                model-agnostic and supports continuous quality improvement over
-                time.
+                Impact is designed to check product evidence across multiple
+                sources before key conclusions are shown. When information is
+                weak, incomplete, or inconsistent, it is handled cautiously
+                instead of being presented as certainty.
               </p>
             </div>
             <Separator className="bg-white/15" />
             <div>
               <h3 className="subsection-title">4.2. Engineering Approach</h3>
               <p className="section-copy">
-                Our systems are designed for accuracy, speed, and reliability at
-                scale. We prioritize measurable quality, transparent evaluation,
-                and fast iteration so users receive reliable guidance as
-                products and markets evolve.
+                Our systems are designed for consistency, speed, and reliability
+                over time. We prioritize measurable quality and transparent
+                evaluation so your guidance stays dependable as products and
+                markets evolve.
               </p>
             </div>
           </Card.Content>
@@ -215,21 +277,21 @@ export default function Home() {
           <Card.Content className="space-y-4 p-6 sm:p-8">
             <h2 className="section-title">5. Business Model</h2>
             <p className="section-copy">
-              Impact follows a trust-first affiliate model with explicit user
-              safeguards.
+              Impact follows a trust-first affiliate model with explicit
+              safeguards for you.
             </p>
             <ul className="list-disc space-y-2 pl-5 text-sm leading-7 text-slate-200 sm:text-base">
               <li>
                 <strong>Phase 1 (Launch):</strong> no affiliate links while we
-                focus on product quality and user trust.
+                focus on product quality and your trust.
               </li>
               <li>
                 <strong>Phase 2 (Monetization):</strong> curated affiliate
                 partnerships introduced after trust and utility are established.
               </li>
               <li>
-                <strong>Transparency Rule:</strong> users should always see the
-                best available option within our trusted retailer sandbox.
+                <strong>Transparency Rule:</strong> you should always see the
+                best available option within our verified retailer set.
               </li>
             </ul>
           </Card.Content>
@@ -241,8 +303,21 @@ export default function Home() {
             <p className="section-copy">
               EurekaCore is founded by Arijit Dey and Dipak Dey. We are a small
               team focused on building Impact into a dependable global product
-              research platform.
+              decision platform.
             </p>
+          </Card.Content>
+        </Card>
+
+        <Card className="section-card">
+          <Card.Content className="space-y-4 p-3 sm:p-8">
+            <h2 className="section-title">
+              7. Share Feedback and Get Launch Notification
+            </h2>
+            <p className="section-copy">
+              Tell us what you want from Impact, and optionally get one launch
+              notification when we go live.
+            </p>
+            <LaunchEngagementSection />
           </Card.Content>
         </Card>
 

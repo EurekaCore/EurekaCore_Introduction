@@ -88,7 +88,7 @@ export function LaunchEngagementSection() {
     <section>
       <Card className="border border-white/10 bg-slate-900/35 backdrop-blur-sm">
         <Card.Header className="flex flex-col gap-2 p-4 pb-2 sm:p-6 sm:pb-3">
-          <Card.Title className="text-xl text-white">Help Shape Impact</Card.Title>
+          <Card.Title className="text-xl text-white">Help Us Build Impact</Card.Title>
           <Card.Description className="text-sm leading-6 text-slate-300">
             Share what you are excited about and what we should improve first.
             Add your email if you want one launch notification when Impact goes
